@@ -128,7 +128,9 @@ p {
 
 /* Contact */
 
-.contact .contact-link {
+.contact-link {
+  display: inline-flex;
+  align-items: center;
   color: var(--primari-text-color);
 }
 .contact li + li {
@@ -150,6 +152,23 @@ p {
   letter-spacing: 0.02em;
 }
 
+.contact-link::before {
+  display: inline-block;
+  align-items: center;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-envelope::before {
+  background-image: url(../images/icon.svg/1_envelope.svg);
+}
+.icon-smartphfone::before {
+  background-image: url(../images/icon.svg/2_smartphone.svg);
+}
 a {
   text-decoration: none;
 }
@@ -161,6 +180,13 @@ a {
   margin-bottom: 94px;
   text-align: center;
 
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero-icon.jpg);
   background-color: var(--hero-bgrcolor);
 }
 
@@ -215,8 +241,34 @@ h2 {
 }
 .features-list li {
   width: 270px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: 30px;
+}
+.features-list li:nth-last-child(-n + 1) {
+  margin-right: 0px;
+}
+.features-list .title::before {
+  display: block;
+  content: "";
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--staff-bdrcolor);
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icon.svg/3_antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/icon.svg/4_clock.svg);
+}
+.icon-vector::before {
+  background-image: url(../images/icon.svg/5_vector.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icon.svg/6_astronaut.svg);
 }
 
 /* Work */
@@ -236,11 +288,11 @@ h2 {
 
   background-color: var(--staff-bdrcolor);
 }
-.staff-name li {
+.staff-name .staff-person {
   display: inline-block;
   margin-right: -4px;
 }
-.staff-name li + li {
+.staff-person:not(:first-child) {
   margin-left: 30px;
 }
 .staff-name {
@@ -263,9 +315,44 @@ h2 {
 .staff-name .position {
   font-size: 16px;
   text-align: center;
+  margin-bottom: 16px;
 }
 .staff-box {
-  height: 368px;
+  height: 428px;
+}
+.social-links {
+  display: inline-flex;
+  width: 206px;
+  height: 44px;
+}
+
+.social-links li:not(:nth-of-type()) {
+  margin-right: 10px;
+}
+.social::after {
+  display: inline-block;
+  content: "";
+  width: 44px;
+  height: 44px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.instagram::after {
+  background-image: url(../images/icon.svg/7_instagram.svg);
+}
+.twitter::after {
+  background-image: url(../images/icon.svg/8_twitter.svg);
+}
+.facebook::after {
+  background-image: url(../images/icon.svg/9_facebook.svg);
+}
+.linkedin::after {
+  background-image: url(../images/icon.svg/10_linkedin.svg);
+}
+
+.social-links li:not(:nth-last-child(-n + 1)) {
+  margin-right: 30px;
 }
 
 /* Footer */
