@@ -119,6 +119,39 @@ img {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+.link {
+  position: relative;
+}
+.link::after {
+  content: "";
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  display: none;
+}
+
+#studio {
+  color: var(--accent-color);
+  /* border-bottom: 4px solid var(--accent-color);
+  border-radius: 2px; */
+}
+#studio::after {
+  display: block;
+}
+#portfolio {
+  color: var(--accent-color);
+  /* border-bottom: -4px solid var(--accent-color);
+  border-radius: 2px; */
+}
+#portfolio::after {
+  display: block;
+}
 
 /* Contact */
 
@@ -158,10 +191,10 @@ img {
   background-position: center;
 }
 .icon-envelope::before {
-  background-image: url(../images/icon.svg/1_envelope.svg);
+  background-image: url(../images/icons.svg#envelope);
 }
 .icon-smartphfone::before {
-  background-image: url(../images/icon.svg/2_smartphone.svg);
+  background-image: url(../images/icons.svg#smartphone);
 }
 a {
   text-decoration: none;
@@ -230,8 +263,12 @@ h2 {
 .features-list {
   display: flex;
   margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0px;
+}
+.features-list li {
+  width: 270px;
+}
+.features-list li:not(:nth-last-child(1)) {
+  margin-right: 30px;
 }
 .features-list .title {
   color: var(--title-text-color);
@@ -239,12 +276,6 @@ h2 {
   font-size: 14px;
   margin-top: 0px;
   margin-bottom: 10px;
-}
-.features-list li {
-  width: 270px;
-}
-.features-list li:not(:nth-last-child(-n + 1)) {
-  margin-right: 30px;
 }
 .features-list .title::before {
   display: block;
@@ -293,14 +324,15 @@ h2 {
 
   background-color: var(--staff-bdrcolor);
 }
-.staff-name .staff-person {
+/* .staff-name .staff-person {
   display: inline-block;
   margin-right: -4px;
-}
+} */
 .staff-person:not(:first-child) {
   margin-left: 30px;
 }
 .staff-name {
+  display: flex;
   padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -375,13 +407,12 @@ h2 {
 .page-footer .text-info {
   color: var(--primari-white-color);
   font-style: normal;
+  line-height: 1.71;
 }
 .adress-list .info {
   color: var(--contact-footer);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
 }
 .adress-list .info:hover,
 .adress-list .info:focus {
@@ -390,14 +421,11 @@ h2 {
 .adress-list {
   padding-left: 0px;
 }
+.adress-list li + li {
+  margin-top: 9px;
+}
 
 /* Button */
-#studio {
-  color: var(--accent-color);
-}
-#portfolio {
-  color: var(--accent-color);
-}
 .button {
   width: 200px;
   height: 50px;
@@ -457,12 +485,6 @@ h2 {
   width: 611px;
   height: 54px;
   margin: 94px auto 34px;
-}
-.container .title-hide {
-  color: var(--hide);
-  margin-top: 0px;
-  margin-bottom: 0px;
-  line-height: 0px;
 }
 .project img {
   margin-bottom: 20px;
