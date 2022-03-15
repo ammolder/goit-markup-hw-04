@@ -56,6 +56,9 @@ img {
 }
 
 /* Header */
+.header {
+  border-bottom: -1px solid var(--border-box);
+}
 .container {
   width: 1200px;
   padding-left: 15px;
