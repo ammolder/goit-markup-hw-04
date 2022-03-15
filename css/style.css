@@ -57,7 +57,7 @@ img {
 
 /* Header */
 .header {
-  border-bottom: -1px solid var(--border-box);
+  border-bottom: 1px solid var(--border-box);
 }
 .container {
   width: 1200px;
