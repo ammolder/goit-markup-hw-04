@@ -436,6 +436,7 @@ h2 {
 }
 .container.footer {
   display: flex;
+  align-items: baseline;
 }
 .logo-footer {
   display: block;
@@ -469,7 +470,6 @@ h2 {
   margin-bottom: 20px;
 }
 .social-footer {
-  margin-top: 7px;
   margin-left: 70px;
 }
 .social-links {
@@ -536,6 +536,7 @@ h2 {
   letter-spacing: 0.03em;
   cursor: pointer;
   text-align: center;
+  border: none;
 }
 .buttons:hover,
 .buttons:focus {
@@ -612,7 +613,7 @@ h2 {
 .project-list li:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.project-list li:hover {
+.project-list a:hover {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
     0px 1px 1px 0px #0000001f;
 }
