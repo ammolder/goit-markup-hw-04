@@ -131,7 +131,7 @@ img {
 
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  bottom: -2px;
 
   display: block;
   width: 100%;
@@ -177,15 +177,11 @@ img {
 .contact .contact-link:focus {
   color: var(--accent-color);
 }
-.contact-icons {
-  display: flex;
-  margin-right: 10px;
-  background: var(--primari-white-color);
-}
 
 .envelope {
   width: 16px;
   height: 12px;
+  margin-right: 10px;
   fill: var(--primari-text-color);
 }
 .icon-envelope:hover .envelope,
@@ -193,9 +189,10 @@ img {
   fill: var(--accent-color);
 }
 .smartphone {
-  fill: var(--primari-text-color);
   width: 10px;
   height: 16px;
+  margin-right: 10px;
+  fill: var(--primari-text-color);
 }
 .icon-smartphone:hover .smartphone,
 .icon-smartphone:focus .smartphone {
@@ -333,8 +330,7 @@ h2 {
   margin-left: 30px;
 }
 .staff-box {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .staff-box .name {
   color: var(--title-text-color);
@@ -353,8 +349,6 @@ h2 {
 .social-team {
   display: inline-flex;
   justify-content: center;
-  margin-left: 32px;
-  margin-right: 32px;
 }
 .social-team li + li {
   margin-left: 10px;
@@ -372,9 +366,7 @@ h2 {
 .person-link:focus {
   background-color: var(--accent-color);
 }
-.person-icon {
-  display: inline-flex;
-}
+
 .instagram,
 .twitter,
 .facebook,
@@ -403,9 +395,11 @@ h2 {
   display: inline-flex;
 }
 .client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
   border: 1px solid var(--bg-icon);
   margin-right: -4px;
   border-radius: 4px;
@@ -488,9 +482,7 @@ h2 {
   background-color: var(--bg-icon-footer);
   border-radius: 50%;
 }
-.footer-icons {
-  display: inline-flex;
-}
+
 .instagram-footer,
 .twitter-footer,
 .facebook-footer,
@@ -607,13 +599,17 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
+.project-card {
+  display: flex;
+}
 .project-list li:not(:nth-of-type(3n)) {
   margin-right: 30px;
 }
 .project-list li:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.project-list a:hover {
+.project-card a:hover,
+.project-card a:focus {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
     0px 1px 1px 0px #0000001f;
 }
